@@ -175,7 +175,7 @@ public class Calcular {
         }
         else return false;
       }
-    /*
+    
     public void subir(){
         try{
                 Connection conn = null; 
@@ -194,7 +194,7 @@ public class Calcular {
                      System.err.println("Got an exception!");
                      System.err.println(e.getMessage());
                        }
-    }*/
+    }
     /*
     public void subir(String rut, String Nom,String AP, String AM, String em, int tel, int money, int ncuotas, String fechaP, String fechaN){
         try{

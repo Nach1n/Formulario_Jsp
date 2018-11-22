@@ -46,7 +46,7 @@ public class Controlador extends HttpServlet {
         obj.setPlazo(Integer.parseInt(request.getParameter("plazo")));
         obj.setFecha_p(request.getParameter("fecha_p"));
         obj.setFecha_n(request.getParameter("fecha_n"));
-        //obj.subir();
+        obj.subir();
         obj.validar_rut();
         obj.validar_nombre();
         obj.validar_apellido_p();
