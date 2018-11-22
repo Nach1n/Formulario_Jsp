@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -55,8 +57,14 @@ public class Controlador extends HttpServlet {
         obj.validar_telefono();
         obj.validar_monto();
         obj.validar_plazo();
-        obj.validar_fecha_pago();
-        obj.validar_fecha_nacimiento();
+        //obj.validar_fecha_pago();
+        //obj.validar_fecha_nacimiento();
+               
+        /*try {
+            obj.validar_fecha_nacimiento();
+        } catch (Exception ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }*/
         
         
         request.setAttribute("ObjetoJava", obj);

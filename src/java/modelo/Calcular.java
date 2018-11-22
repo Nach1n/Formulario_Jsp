@@ -109,6 +109,29 @@ public class Calcular {
         if(plazo>=6 && plazo<49)return true;
         else return false;
     }
+    
+    /*public boolean validar_fecha_nacimiento()throws Exception {
+        String fecha = this.getFecha_n();
+        
+        if(fecha==null){return false;}
+        else{
+            Date dateI=new SimpleDateFormat("dd/MM/yyyy").parse(fecha);
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(dateI);
+
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Calendar cal = Calendar.getInstance();
+
+            int anoac = cal.get(Calendar.YEAR);
+            if((anoac - year <=81)||(anoac - year >=21)){ return true;}
+            else return false;
+      }}*/
+    
     /*
     public boolean validar_fecha_pago(){
         String fecha = this.getFecha_p();
@@ -131,6 +154,7 @@ public class Calcular {
         }}
         return false;
       }*/
+    
     public boolean validar_fecha_pago() {
         String fecha = this.getFecha_p();
         try {
@@ -157,6 +181,7 @@ public class Calcular {
         return false;
       }
     
+    
     public boolean validar_fecha_nacimiento(){
         String fecha = this.getFecha_n();
         try {
@@ -175,6 +200,63 @@ public class Calcular {
         }
         else return false;
       }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    public boolean validar_fecha_pago() {
+        String fecha = this.getFecha_p();
+        if(fecha==null){return false;}
+        else{
+            int year = Integer.parseInt(fecha.substring(6, fecha.length() - 1));
+            int month = Integer.parseInt(fecha.substring(3, 4));
+            int day = Integer.parseInt(fecha.substring(0, 1));
+
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Calendar cal = Calendar.getInstance();
+
+            int anoac = cal.get(Calendar.YEAR);
+            int mesac = cal.get(Calendar.MONTH);
+            int diaac = cal.get(Calendar.DATE);
+
+            if(mesac==12){
+                if(year == anoac+1){
+                    return true;
+                }
+              return false;
+            }
+            else if((mesac+1)==month){
+                return true;
+
+            }else{return false;}
+        }
+      }
+  
+    
+    public boolean validar_fecha_nacimiento(){
+        String fecha = this.getFecha_n();
+        if(fecha==null){return false;}
+        else{
+            int year = Integer.parseInt(fecha.substring(6, fecha.length() - 1));
+            int month = Integer.parseInt(fecha.substring(3, 4));
+            int day = Integer.parseInt(fecha.substring(0, 1));
+
+            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            Calendar cal = Calendar.getInstance();
+
+            int anoac = cal.get(Calendar.YEAR);
+            if((anoac - year <=81)||(anoac - year >=21)){ return true;}
+            else return false;
+        }
+      }*/
+    
+    
+    
     
     public void subir(){
         try{
